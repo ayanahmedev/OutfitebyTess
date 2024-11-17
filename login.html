@@ -1,23 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>wellcome to Tess login form </title>
-  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
-<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'><link rel="stylesheet" href="./login.css">
-
+  <title>Welcome to Tess Login Form</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="./login.css">
 </head>
 <body>
-<!-- partial:index.partial.html -->
-
-
-
-
 
 <section class="header-1">  
     <header>
         <h2 class="logo">Tee's</h2>
-        <!-- Hamburger icon for mobile -->
         <div class="hamburger" onclick="toggleMenu()">
             <span></span>
             <span></span>
@@ -31,36 +24,32 @@
             <a href="#">Deals & Packs</a>
         </nav>
         <div class="icon">
-          <img src="user.png" alt="User" class="user1" >
+          <img src="user.png" alt="User" class="user1">
           <img src="search.png" alt="Search" class="user-2">
           <img src="bag.png" alt="Bag" class="user">
       </div>  
     </header>
-   
 </section>
-
-
-
 
 <div class="container">
 	<div class="screen">
 		<div class="screen__content">
-			<form class="login">
+			<form class="login" id="loginForm">
 				<div class="login__field">
 					<i class="login__icon fas fa-user"></i>
-					<input type="text" class="login__input" placeholder="User name / Email">
+					<input type="text" class="login__input" id="username" placeholder="User name / Email">
 				</div>
 				<div class="login__field">
 					<i class="login__icon fas fa-lock"></i>
-					<input type="password" class="login__input" placeholder="Password">
+					<input type="password" class="login__input" id="password" placeholder="Password">
 				</div>
-				<button class="button login__submit">
+				<button type="submit" class="button login__submit">
 					<span class="button__text">Log In Now</span>
 					<i class="button__icon fas fa-chevron-right"></i>
 				</button>				
 			</form>
 			<div class="social-login">
-				<h3>log in via</h3>
+				<h3>Log in via</h3>
 				<div class="social-icons">
 					<a href="#" class="social-login__icon fab fa-instagram"></a>
 					<a href="#" class="social-login__icon fab fa-facebook"></a>
@@ -76,13 +65,33 @@
 		</div>		
 	</div>
 </div>
-<!-- partial -->
 
 <script>
-      function toggleMenu() {
-            const nav = document.querySelector('.navigation');
-            nav.classList.toggle('active');
-        }
+  // Toggle menu for mobile view
+  function toggleMenu() {
+    const nav = document.querySelector('.navigation');
+    nav.classList.toggle('active');
+  }
+
+  // Login form submission
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form from refreshing the page
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Predefined admin credentials
+    const adminUsername = "Admin@MSG";
+    const adminPassword = "705X7RR9";
+
+    if (username === adminUsername && password === adminPassword) {
+      alert("Login successful. Welcome, Admin!");
+      // Redirect or perform admin-specific actions
+      window.location.href = "admin.html"; // Example redirect
+    } else {
+    //   alert("Invalid username or password. Please try again.");
+    }
+  });
 </script>
   
 </body>
