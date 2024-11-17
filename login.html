@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Mohithpoojary</title>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'><link rel="stylesheet" href="./login.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+
+
+
+
+<section class="header-1">  
+    <header>
+        <h2 class="logo">Tee's</h2>
+        <!-- Hamburger icon for mobile -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">Plain T-Shirts</a>
+            <a href="#">Pakistan T-Tales</a>
+            <a href="#">Print on Demand</a>
+            <a href="#">Deals & Packs</a>
+        </nav>
+        <div class="icon">
+          <img src="user.png" alt="User" class="user1" onclick="goToPage('login.html')">
+          <img src="search.png" alt="Search" class="user-2">
+          <img src="bag.png" alt="Bag" class="user">
+      </div>  
+    </header>
+   
+</section>
+
+
+
+
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form class="login">
+				<div class="login__field">
+					<i class="login__icon fas fa-user"></i>
+					<input type="text" class="login__input" placeholder="User name / Email">
+				</div>
+				<div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+					<input type="password" class="login__input" placeholder="Password">
+				</div>
+				<button class="button login__submit">
+					<span class="button__text">Log In Now</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>				
+			</form>
+			<div class="social-login">
+				<h3>log in via</h3>
+				<div class="social-icons">
+					<a href="#" class="social-login__icon fab fa-instagram"></a>
+					<a href="#" class="social-login__icon fab fa-facebook"></a>
+					<a href="#" class="social-login__icon fab fa-twitter"></a>
+				</div>
+			</div>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>
+<!-- partial -->
+
+<script>
+      function toggleMenu() {
+            const nav = document.querySelector('.navigation');
+            nav.classList.toggle('active');
+        }
+</script>
+  
+</body>
+</html>

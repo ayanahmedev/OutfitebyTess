@@ -29,7 +29,7 @@
                 <a href="#">Deals & Packs</a>
             </nav>
             <div class="icon">
-              <img src="user.png" alt="User" class="user1">
+              <img src="user.png" alt="User" class="user1" onclick="goToPage('login.html')">
               <img src="search.png" alt="Search" class="user-2">
               <img src="bag.png" alt="Bag" class="user">
           </div>  
@@ -118,7 +118,7 @@
                   <h4 class="card-title">tess's</h4>
                   <p class="price">Rs.1,550.00</p>
                   <p class="card-text">Comfortable and trendy, inspired by popular culture.</p>
-                  <a href="https://wa.me/923043929788?text=HelloiwanttobuythisTess" target="_blank">
+                  <a href="https://wa.me/923043929788?text=   " target="_blank">
                     <button class="btn-add-cart">buy now !</button>
                   </a>
               </div>
@@ -144,6 +144,10 @@
         document.getElementById("clickable-image").addEventListener("click", function() {
     window.location.href = "streetlight.html"; // Change to your desired URL
 });
+
+function goToPage(url) {
+    window.location.href = url;
+}
 
     </script>
     <script>
